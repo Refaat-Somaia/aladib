@@ -1,0 +1,131 @@
+:root {
+    --main-color: #00ADBC;
+    --secondary-color: #303030;
+    --white: #ffff;
+    --gray: #636363;
+    --main-font-color: #303030;
+}
+
+/* change the color and background of text when selected */
+::-moz-selection {
+    color: var(--white);
+    background: var(--main-color);
+  }
+  
+  ::selection {
+    color: var(--white);
+    background: var(--main-color);
+  }
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    transition: 0.3s;
+    align-items: center;
+    font-size: 1.3rem;
+    justify-content: space-between;
+    min-height: 70px;
+    background-color: #ffffffb9;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul a {
+    margin: 2rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul a:hover {
+    color: var(--main-color);
+    transition: all 0.3s;
+}
+
+nav img {
+    max-width: 125px;
+}
+
+main {
+    min-height: 120vh;
+}
+
+h1, h2 {
+    color: var(--main-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    /* margin-left: 5px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+div img {
+    max-width: 25px;
+}
+
+.center {
+    text-align: center;
+}
+
+#contact-us-image {
+   max-width: 75%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex > * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center > * {
+    margin: 1rem;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.margin-right {
+    margin-right: 10rem;
+}

@@ -1,0 +1,532 @@
+:root {
+    --main-color: #00ADBC;
+    --secondary-color: #303030;
+    --white: #ffff;
+    --gray: #636363;
+    --main-font-color: #303030;
+}
+
+/* change the color and background of text when selected */
+::-moz-selection {
+    color: var(--white);
+    background: var(--main-color);
+  }
+  
+  ::selection {
+    color: var(--white);
+    background: var(--main-color);
+  }
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+body {
+    text-align: center;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+}
+
+.absolute {
+    position: absolute;
+    left: 30%;
+}
+
+.closed-notebook {
+    position: relative;
+    top: 10rem;
+    margin: auto;
+    opacity: 1;
+    /* transform: all 0.5s ease-in-out; */
+    transition : all .5s;
+    -wekit-transition : all .5s;
+    -moz-transition : all .5s;
+    max-width: 40%;
+
+}
+
+.invisible {
+    opacity: 0;
+    transition : all .5s;
+    -wekit-transition : all .5s;
+    -moz-transition : all .5s;
+}
+
+
+/* 
+img {
+    max-width: 25vw;
+    max-height: 25vw;
+} */
+
+
+/* animated notebook box elements */
+
+.notebooks-notebook {
+    opacity: 0;
+    left: 40%;
+
+    top: 40%;
+    animation-name: slideRight1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.notebooks-open-notebook {
+    opacity: 0;
+    left: 40%;
+    max-width: 20vw;
+    top: 40%;
+    animation-name: slideRight2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.calendar {
+    opacity: 0;
+    left: 40%;
+    top: 40%;
+    animation-name: slideRight3;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.coaster {
+    opacity: 0;
+    left: 40%;
+    top: 40%;
+    animation-name: slideLeft1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.penholder {
+    opacity: 0;
+    left: 40%;
+    top: 40%;
+    animation-name: slideLeft2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.pens {
+    opacity: 0;
+    left: 40%;
+    top: 40%;
+    animation-name: slideLeft3;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.slanted-sticker {
+    opacity: 0;
+    left: 40%;
+    top: 40%;
+    animation-name: slideLeft4;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.small-notebook {
+    opacity: 0;
+    left: 40%;
+    top: 40%;
+    animation-name: slideLeft5;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.standing-notebook {
+    opacity: 0;
+    left: 40%;
+    top: 40%;
+    animation-name: slideLeft6;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.phone-holder {
+    opacity: 0;
+    left: 40%;
+    top: 40%;
+    animation-name: slideLeft7;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+/* notebooks box animations / keyframes */
+@keyframes slideRight1 {
+    from {
+        transform: translateX(0em);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(30em);
+    }
+}
+
+
+@keyframes slideRight2 {
+    from {
+        opacity: 0;
+        transform: translateX(0em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem) translateY(-2em);
+    }
+}
+
+@keyframes slideRight3 {
+    from {
+        opacity: 0;
+        transform: translateX(0em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(30rem) translateY(-12em);
+    }
+}
+
+@keyframes slideLeft1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-30rem,3rem);
+    }
+}
+
+@keyframes slideLeft2 {
+    from {
+        opacity: 0;
+        transform: translateX(0em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-30rem) translateY(10em);
+    }
+}
+
+@keyframes slideLeft3 {
+    from {
+        opacity: 0;
+        transform: translateX(0em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-35rem) translateY(-15em);
+    }
+}
+
+@keyframes slideLeft4 {
+    from {
+        opacity: 0;
+        transform: translateX(0em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-20em) translateY(-6em);
+    }
+}
+
+@keyframes slideLeft5 {
+    from {
+        opacity: 0;
+        transform: translateX(0em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-10em) translateY(10em);
+    }
+}
+
+@keyframes slideLeft6 {
+    from {
+        opacity: 0;
+        transform: translateX(0em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-10em) translateY(-15em);
+    }
+}
+
+@keyframes slideLeft7 {
+    from {
+        opacity: 0;
+        transform: translateX(0em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(10em) translateY(8em);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* media query for smaller screens */
+
+@media only screen and (max-width: 1024px){
+
+    main {
+        min-height: 450vh
+    }
+
+    .open-notebook {
+        max-width: 50%;
+    }
+
+    .notebooks-notebook,
+    .notebooks-open-notebook,
+    .calendar ,
+    .coaster,
+    .penholder,
+    .pens,
+    .slanted-sticker,
+    .small-notebook,
+    .standing-notebook,
+    .phone-holder {
+        top: 0;
+        left: 30%;
+        /* position: relative; */
+        max-width: 40%;
+    }
+
+    @keyframes slideRight1 {
+        from {
+            /* transform: translateY(0); */
+            /* transform: translateX(5em); */
+            opacity: 0;
+        }
+    
+        50% {
+            opacity: 0.5;
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateY(50vh);
+        }
+    }
+    
+    
+    @keyframes slideRight2 {
+        from {
+            opacity: 0;
+            /* transform: translateY(0); */
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateY(90vh);
+        }
+    }
+    
+    @keyframes slideRight3 {
+        from {
+            opacity: 0;
+            /* transform: translateY(0px); */
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(4vw) translateY(130vh);
+        }
+    }
+    
+    @keyframes slideLeft1 {
+        from {
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(6vw) translateY(170vh);
+        }
+    }
+    
+    @keyframes slideLeft2 {
+        from {
+            opacity: 0;
+            /* transform: translateX(0em); */
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateY(190vh);
+        }
+    }
+    
+    @keyframes slideLeft3 {
+        from {
+            opacity: 0;
+            transform: translateX(0em);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(3vw) translateY(220vh);
+        }
+    }
+    
+    @keyframes slideLeft4 {
+        from {
+            opacity: 0;
+            /* transform: translateX(0em); */
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(8vw) translateY(265vh);
+        }
+    }
+    
+    @keyframes slideLeft5 {
+        from {
+            opacity: 0;
+            /* transform: translateX(0em); */
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(4vw) translateY(295vh);
+        }
+    }
+    
+    @keyframes slideLeft6 {
+        from {
+            opacity: 0;
+            /* transform: translateX(0em); */
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(2vw) translateY(335vh);
+        }
+    }
+    
+    @keyframes slideLeft7 {
+        from {
+            opacity: 0;
+            /* transform: translateX(0em); */
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateY(385vh);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+
+    main {
+        text-align: center;
+    }
+
+    .open-notebook {
+        max-width: 60%;
+    }
+    
+    .notebooks-notebook,
+    .notebooks-open-notebook,
+    .calendar ,
+    .coaster,
+    .penholder,
+    .pens,
+    .slanted-sticker,
+    .small-notebook,
+    .standing-notebook,
+    .phone-holder {
+        max-width: 40%;
+    }
+
+}
+
+
+@media only screen and (max-width: 550px){
+
+    main {
+        text-align: center;
+    }
+
+    .open-notebook {
+        max-width: 70%;
+    }
+    
+    .notebooks-notebook,
+    .notebooks-open-notebook,
+    .calendar ,
+    .coaster,
+    .penholder,
+    .pens,
+    .slanted-sticker,
+    .small-notebook,
+    .standing-notebook,
+    .phone-holder {
+        max-width: 60%;
+    }
+
+}
